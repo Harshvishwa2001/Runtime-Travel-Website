@@ -3,7 +3,16 @@
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-const sections = [
+interface JourneySection {
+    id: number,
+    days: string,
+    title: string,
+    desc: string,
+    price: string,
+    image: string
+}
+
+const sections: JourneySection[] = [
     {
         id: 1,
         days: "14 DAYS • NEPAL & BHUTAN",
@@ -29,6 +38,7 @@ const sections = [
         image: "/Home/Images/journey2.jpg"
     }
 ];
+
 export default function Journey() {
     const [activeIndex, setActiveIndex] = useState(0);
 

@@ -81,13 +81,13 @@ export default function HomeTestimonial() {
                 <div className="flex gap-10 justify-center">
                     <button
                         onClick={() => swiperRef.current?.slidePrev()}
-                        className="w-12 h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors"
+                        className="w-12 h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
                     >
                         <GoArrowLeft size={22} />
                     </button>
                     <button
                         onClick={() => swiperRef.current?.slideNext()}
-                        className="w-12 h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors"
+                        className="w-12 h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
                     >
                         <GoArrowRight size={22} />
                     </button>

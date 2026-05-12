@@ -174,3 +174,20 @@ body {
     @apply font-sans;
   }
 }
+
+.image-track {
+  display: flex;
+  width: max-content;
+  animation: slide-images 60s linear infinite;
+}
+
+
+@keyframes slide-images {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
