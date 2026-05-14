@@ -19,7 +19,7 @@ export default function SupportHero({ img, title, subdesc, tag }: SupportHeroPro
                     priority
                     className="object-cover transition-transform duration-[3s] scale-100 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/60 bg-linear-to-t from-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-black/40 bg-linear-to-t from-black/20 to-transparent" />
             </div>
 
             {/* 2. Central Content Container */}
