@@ -28,9 +28,6 @@ export default function Button({
             className={`
         bg-white 
         text-[#050E1A] 
-        text-sm
-        font-semibold
-
         px-6 
         py-3 
         rounded-md 

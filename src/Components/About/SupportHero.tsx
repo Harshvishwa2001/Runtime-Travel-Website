@@ -1,20 +1,25 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-import Button from '../Common/Button';
 
-export default function SupportHero() {
+interface SupportHeroProps {
+    img: string,
+    title: string,
+    subdesc: string,
+    tag: string
+}
+
+export default function SupportHero({ img, title, subdesc, tag }: SupportHeroProps) {
     return (
-        <section className="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden font-serif">
+        <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden font-serif">
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/About/Images/support.jpg"
-                    alt="Luxury India Journey Background"
+                    src={img}
+                    alt={title}
                     fill
                     priority
                     className="object-cover transition-transform duration-[3s] scale-100 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/60 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-black/60 bg-linear-to-t from-black/40 to-transparent" />
             </div>
 
             {/* 2. Central Content Container */}
@@ -22,12 +27,12 @@ export default function SupportHero() {
 
                 {/* Main Heading */}
                 <h1 className="text-6xl md:text-[66px] font-light leading-[1.2] max-w-3xl mb-8 tracking-[-0.01em]">
-                    Ready to experience India like never before?
+                    {title}
                 </h1>
 
                 {/* Subtitle / Descriptive text */}
                 <p className="text-[17px] font-secondary font-light text-white/65 leading-relaxed mb-12 max-w-xl">
-                    Let's design a journey that feels exactly like you.
+                    {subdesc}
                 </p>
 
                 {/* Sophisticated Gold Button (matching other components) */}
@@ -40,7 +45,7 @@ export default function SupportHero() {
 
                 {/* Footnote Benefits */}
                 <span className="text-[11px] font-secondary font-medium uppercase text-white tracking-[0.25em]">
-                    TAILOR-MADE · PRIVATE DEPARTURES · 24/7 SUPPORT
+                    {tag}
                 </span>
             </div>
         </section>
