@@ -55,7 +55,7 @@ const features: FeatureItem[] = [
 
 export default function Reason() {
     return (
-        <div className='px-25 py-4'>
+        <div className='px-25 py-10'>
             <h2 className='text-[36px] text-[#1F1B17] font-semibold font-manrope text-center py-6'>Reasons to Fall in Love</h2>
 
             <div className="grid grid-cols-4 items-start gap-4">

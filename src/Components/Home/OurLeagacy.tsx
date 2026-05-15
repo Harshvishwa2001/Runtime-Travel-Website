@@ -1,6 +1,8 @@
 import { JSX } from 'react';
-import { BsArrowRight } from 'react-icons/bs'
-import { FiUsers } from 'react-icons/fi'
+import { BsArrowRight } from 'react-icons/bs';
+import { FiMapPin, FiUsers } from 'react-icons/fi';
+import { LuLeaf } from 'react-icons/lu';
+import { PiStarFour } from 'react-icons/pi';
 import SlideImage from '../Common/SlideImage';
 
 interface TravelItem {
@@ -14,13 +16,13 @@ const travel: TravelItem[] = [
         icon: <FiUsers size={22} />, name: "We cap at 12. Always.", desc: "Large tour buses and anonymous crowds are the antithesis of real travel. Every Shanti journey carries a maximum of 12 travelers — small enough to eat at tables locals actually visit, stay in guesthouses that don't take groups, and travel at a rhythm that lets you breathe."
     },
     {
-        icon: <FiUsers size={22} />, name: "Not a guidebook.", desc: "Every destination specialist on our team was born, grew up, or has lived for years in the region they lead. They know which temple opens early for silence, which family makes the best noodles three streets off the market, and when the fog rolls through the valley at dawn."
+        icon: <FiMapPin size={22} />, name: "Not a guidebook.", desc: "Every destination specialist on our team was born, grew up, or has lived for years in the region they lead. They know which temple opens early for silence, which family makes the best noodles three streets off the market, and when the fog rolls through the valley at dawn."
     },
     {
-        icon: <FiUsers size={22} />, name: "Nothing is copy-paste.", desc: "We don't reuse itineraries. Your journey is built from a conversation — your pace, your passions, your idea of luxury (a mountain lodge or a city riad?). Our experts spend days crafting something that could only belong to you."
+        icon: <PiStarFour size={22} />, name: "Nothing is copy-paste.", desc: "We don't reuse itineraries. Your journey is built from a conversation — your pace, your passions, your idea of luxury (a mountain lodge or a city riad?). Our experts spend days crafting something that could only belong to you."
     },
     {
-        icon: <FiUsers size={22} />, name: "Leave it better ", desc: "We partner exclusively with locally-owned accommodation, prioritise land and boat transport over short-haul flights, and contribute a portion of every booking to community conservation projects in each destination."
+        icon: <LuLeaf size={22} />, name: "Leave it better ", desc: "We partner exclusively with locally-owned accommodation, prioritise land and boat transport over short-haul flights, and contribute a portion of every booking to community conservation projects in each destination."
     },
 ]
 
@@ -39,7 +41,7 @@ export default function OurLeagacy() {
                         <p className='text-2xl'>Preservation through exploration.</p>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 gap-13.75'>
+                <div className='grid grid-cols-2 lg:gap-6 xl:gap-13.75'>
                     {
                         travel.map((item, index) => (
                             <div key={index} className='space-y-4'>
@@ -55,7 +57,7 @@ export default function OurLeagacy() {
                 </div>
             </div>
             <div>
-                <SlideImage/>
+                <SlideImage />
             </div>
         </>
     )

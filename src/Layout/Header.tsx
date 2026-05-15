@@ -80,7 +80,7 @@ export default function Header() {
                 <div className="shrink-0">
                     <Button
                         text="Create Your Trip"
-                        className="scale-90 lg:scale-100 font-secondary text-[#243665]"
+                        className="scale-90 lg:scale-100 font-secondary bg-white text-[#243665]"
                     />
                 </div>
 

@@ -26,7 +26,6 @@ export default function Button({
             disabled={disabled}
             aria-label={ariaLabel || text} // Fallback to text if ariaLabel isn't provided
             className={`
-        bg-white 
         text-[#050E1A] 
         px-6 
         py-3 
@@ -38,7 +37,6 @@ export default function Button({
         
         transition-all 
         duration-200
-        hover:bg-gray-50
         active:scale-95 
         disabled:opacity-50 
         disabled:cursor-not-allowed
