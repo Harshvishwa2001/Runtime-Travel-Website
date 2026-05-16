@@ -3,22 +3,39 @@ import Link from 'next/link';
 
 interface SupportHeroProps {
     img: string,
+    vid: string,
     title: string,
     subdesc: string,
     tag: string
 }
 
-export default function SupportHero({ img, title, subdesc, tag }: SupportHeroProps) {
+export default function SupportHero({ img, vid, title, subdesc, tag }: SupportHeroProps) {
     return (
         <section className="relative w-full h-[85vh] min-h-150 flex items-center justify-center overflow-hidden font-serif">
             <div className="absolute inset-0 z-0">
-                <Image
-                    src={img}
-                    alt={title}
-                    fill
-                    priority
-                    className="object-cover transition-transform duration-[3s] scale-100 group-hover:scale-105"
-                />
+                {img ? (
+                    <Image
+                        src={img}
+                        alt={title}
+                        fill
+                        priority
+                        className="object-cover transition-transform duration-[3s] scale-100 group-hover:scale-105"
+                    />
+                ) : (
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover transition-transform duration-[3s] scale-100 group-hover:scale-105"
+                    >
+                        <source
+                            src={vid}
+                            type="video/mp4"
+                        />
+                    </video>
+                )}
+
                 <div className="absolute inset-0 bg-black/40 bg-linear-to-t from-black/20 to-transparent" />
             </div>
 
