@@ -17,17 +17,17 @@ export default function HomeBanner() {
 
                 <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-4">
                     <div className="mb-6">
-                        <p className="inline-flex items-center gap-2 text-white bg-black/20 text-[12px] backdrop-blur-md px-6 py-2 rounded-full font-manrope uppercase tracking-widest border border-[#FFFFFF33]">
+                        <p className="inline-flex items-center gap-2 text-white bg-black/20 text-[10px] lg:text-[12px] backdrop-blur-md px-6 py-2 rounded-full font-manrope uppercase tracking-widest border border-[#FFFFFF33]">
                             <MapPinIcon size={14} className="text-[#FFD230]" />
                             Taj Mahal - Agra
                         </p>
                     </div>
 
-                    <h1 className="text-[30px] md:text-[70px] text-white ">
+                    <h1 className="px-4 text-[20px] lg:text-[70px] text-white ">
                         Explore the World Beyond the Map
                     </h1>
 
-                    <p className="text-white/90 font-secondary text-lg md:text-xl max-w-2xl mb-10">
+                    <p className="text-white/90 font-secondary text-sm lg:text-xl max-w-2xl mb-10">
                         Discover curated destinations, unforgettable experiences, and journeys designed just for you.
                     </p>
 
@@ -40,20 +40,20 @@ export default function HomeBanner() {
                             <input
                                 type="text"
                                 placeholder="Search a destination, experience..."
-                                className="flex-1 bg-transparent outline-none text-[#243665] text-base md:text-lg placeholder:text-[#99A1AF]"
+                                className="flex-1 bg-transparent outline-none text-[#243665] text-sm lg:text-lg placeholder:text-[#99A1AF]"
                             />
 
-                            <button className="bg-[#26355D] hover:bg-[#1a2542] text-white px-5 md:px-8 py-3 rounded-[14px] flex items-center gap-2 font-bold transition-all duration-300 font-arial tracking-wider text-sm">
-                                <span className="hidden md:inline">Search</span> <ArrowRight size={16} />
+                            <button className="bg-[#26355D] hover:bg-[#1a2542] text-white px-5 lg:px-8 py-3 rounded-[14px] flex items-center gap-2 font-bold transition-all duration-300 font-arial tracking-wider text-sm">
+                                <span className="hidden lg:inline">Search</span> <ArrowRight size={16} />
                             </button>
                         </div>
 
                         {/* Tags */}
-                        <div className="flex flex-wrap justify-center gap-3">
+                        <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
                             {tags.map((tag) => (
                                 <button
                                     key={tag}
-                                    className="px-6 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white text-[12px] transition-all duration-300 font-arial tracking-wider"
+                                    className="px-6 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white  text-[10px] lg:text-[12px] transition-all duration-300 font-arial tracking-wider"
                                 >
                                     {tag}
                                 </button>

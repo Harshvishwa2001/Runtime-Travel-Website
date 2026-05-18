@@ -35,14 +35,14 @@ export default function ItineraryJourney() {
     const { data } = journeyData;
     return (
         <>
-            <div className='px-25 py-18.75 grid grid-cols-2 items-center gap-8'>
+            <div className='px-4 lg:px-25 py-6 lg:py-18.75 grid lg:grid-cols-2 items-center gap-8'>
                 <div className='space-y-5 '>
-                    <p className='font-secondary text-[#243665] text-[16px] uppercase tracking-widest'>{data?.header}</p>
-                    <h2 className='text-[#1A1A1A] text-[50px] leading-14 max-w-lg'>{data?.title?.main}
+                    <p className='font-secondary text-[#243665] text-sm lg:text-[16px] uppercase tracking-widest'>{data?.header}</p>
+                    <h2 className='text-[#1A1A1A] text-2xl lg:text-[50px] leading-10 lg:leading-14 lg:max-w-lg'>{data?.title?.main}
                         <span className='text-[#C8913A] italic'>{data?.title?.accent}</span>
                     </h2>
-                    <p className='text-[18px] text-[#555555] font-secondary tracking-wide'>{data?.desc}</p>
-                    <Button text='Create Your Trip' className='text-white text-[16px] bg-[#243665] uppercase mt-8' />
+                    <p className='text-sm lg:text-[18px] text-[#555555] font-secondary tracking-wide'>{data?.desc}</p>
+                    <Button text='Create Your Trip' className='text-white text-sm lg:text-[16px] bg-[#243665] uppercase lg:mt-8' />
                 </div>
                 <div>
                     <Image src={'/Itinerary/Images/journeu.png'} alt='journey' width={1000} height={1000} className='rounded-xl' />
@@ -58,8 +58,8 @@ export function ItineraryNav() {
 
     return (
         <nav className="w-full bg-white border-b border-[#0000001A]">
-            <div className="w-full mx-auto px-6 md:px-32.5">
-                <div className="flex justify-start md:justify-between md:gap-32">
+            <div className="w-full mx-auto px-4 lg:px-32.5">
+                <div className="flex justify-start lg:justify-between gap-4 lg:gap-32">
                     {navItems.map((item) => {
                         const isActive = activeTab === item.name;
                         return (
@@ -69,14 +69,14 @@ export function ItineraryNav() {
                                 className="relative bottom-0 py-6 transition-all duration-500"
                             >
                                 {/* Nav Text */}
-                                <span className={`text-base md:text-lg font-serif tracking-wide ${isActive ? 'text-gray-900' : 'text-gray-400 hover:text-gray-600'
+                                <span className={`text-sm lg:text-lg font-serif tracking-wide ${isActive ? 'text-gray-900' : 'text-gray-400 hover:text-gray-600'
                                     }`}>
                                     {item.name}
                                 </span>
 
                                 {/* Active Indicator (The Glow effect from your image) */}
                                 {isActive && (
-                                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[160%] h-20 overflow-hidden pointer-events-none">
+                                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full lg:w-[160%] h-20 overflow-hidden pointer-events-none">
                                         {/* The soft radial amber glow */}
                                         <div
                                             className="absolute -bottom-6.25 left-1/2 -translate-x-1/2 w-full h-full rounded-[100%]"

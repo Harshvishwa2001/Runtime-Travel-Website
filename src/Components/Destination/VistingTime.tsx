@@ -44,14 +44,14 @@ const season: SeasonType[] = [
 
 export default function VistingTime() {
     return (
-        <div className='px-25 py-12'>
+        <div className='px-4 lg:px-25 py-6 lg:py-12'>
             <div className='text-center space-y-4'>
-                <h2 className='font-medium font-manrope text-[48px] text-[#050E1A]'>Best Time to Visit</h2>
-                <p className='min-w-2xl px-12.5'>The climate of the Thar Desert is dramatic. Planning your timing is essential for a
+                <h2 className='font-medium font-manrope text-2xl lg:text-[48px] text-[#050E1A]'>Best Time to Visit</h2>
+                <p className='lg:min-w-2xl lg:px-12.5'>The climate of the Thar Desert is dramatic. Planning your timing is essential for a
                     comfortable journey.
                 </p>
             </div>
-            <div className='px-7 py-12 space-y-4'>
+            <div className='lg:px-7 py-8 lg:py-12 space-y-4'>
                 <div className='flex items-center justify-between'>
                     {
                         season?.map((item, index) => (
@@ -75,16 +75,13 @@ export default function VistingTime() {
 
                     {/* Progress Bar from image_a0a0fd.png */}
                     <div className="relative w-full h-3.5 bg-gray-200 rounded-full overflow-hidden flex">
-                        {/* Winter Segment */}
                         <div className="h-full bg-slate-400 w-[25%]" />
-                        {/* Summer Segment */}
                         <div className="h-full bg-gray-300 w-[50%]" />
-                        {/* Monsoon Segment */}
                         <div className="h-full bg-slate-400 w-[25%]" />
                     </div>
 
                     {/* Season Cards from image_a0a152.png */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         {seasons.map((season, index) => (
                             <div
                                 key={index}

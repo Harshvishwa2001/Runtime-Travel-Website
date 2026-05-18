@@ -43,22 +43,22 @@ export default function Journey() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="py-18.75 px-25">
+        <div className="py-6 lg:py-18.75 px-4 lg:px-25">
             <div>
-                <h2 className="text-[48px] text-[#050E1A]">Bespoke Journeys</h2>
+                <h2 className="text-2xl lg:text-[48px] text-[#050E1A]">Bespoke Journeys</h2>
                 <div className="flex items-end justify-between">
-                    <p className="text-[16px] font-secondary text-[#6A7282] mt-4">Curated experiences that transcend travel, offering deep immersion into local culture, history, and unparalleled luxury.</p>
-                    <button className="uppercase text-[12px] font-bold tracking-widest">View All Journeys</button>
+                    <p className="text-[12px] lg:text-[16px] font-secondary text-[#6A7282] mt-4">Curated experiences that transcend travel, offering deep immersion into local culture, history, and unparalleled luxury.</p>
+                    <button className="uppercase text-[10px] lg:text-[12px] font-bold tracking-widest">View All Journeys</button>
                 </div>
             </div>
 
-            <div className="relative flex items-center w-full h-160 gap-8 overflow-hidden top-10">
+            <div className="relative flex flex-col lg:flex-row items-start w-full h-200 lg:h-160 gap-8 overflow-visible lg:overflow-hidden top-10">
 
-                {/* LEFT CONTENT: STICKY */}
-                <div className="w-full lg:w-1/2 h-screen sticky top-0">
+                {/* LEFT CONTENT: STICKY ON DESKTOP, NATURAL FLOW ON MOBILE */}
+                <div className="w-full lg:w-1/2 lg:h-screen lg:sticky lg:top-0 z-10">
 
                     {/* The Menu List (Cards on the left) */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-4 w-full">
                         {sections.map((item, index) => {
                             const isActive = activeIndex === index;
                             return (
@@ -66,29 +66,42 @@ export default function Journey() {
                                     key={item.id}
                                     onClick={() => setActiveIndex(index)}
                                     className={`group relative overflow-hidden transition-all duration-500 cursor-pointer rounded-[24px] border border-gray-200 
-                  ${isActive ? 'bg-[#FCF9F8] shadow-xl p-8' : 'bg-transparent p-6 border-opacity-50'}`}
+                                ${isActive ? 'bg-[#FCF9F8] shadow-xl p-6 lg:p-8' : 'bg-transparent p-5 lg:p-6 border-opacity-50'}`}
                                 >
                                     {/* Meta Header */}
                                     <p className={`font-secondary text-[12px] tracking-[0.2em] text-[#75777C] uppercase transition-colors 
-                  ${isActive ? 'text-[#75777C]' : 'text-gray-300'}`}>
+                                ${isActive ? 'text-[#75777C]' : 'text-gray-300'}`}>
                                         {item.days}
                                     </p>
 
                                     {/* Title */}
-                                    <h2 className={`text-3xl font-bold py-6 transition-colors 
-                  ${isActive ? 'text-[#050E1A]' : 'text-gray-400'}`}>
+                                    <h2 className={`text-2xl lg:text-3xl font-bold py-4 lg:py-6 transition-colors 
+                                ${isActive ? 'text-[#050E1A]' : 'text-gray-400'}`}>
                                         {item.title}
                                     </h2>
 
+                                    {/* INJECTED MOBILE-ONLY IMAGE EXPANSION */}
+                                    <div className={`block lg:hidden overflow-hidden transition-all duration-500 ease-in-out
+                                ${isActive ? 'max-h-[300px] my-4 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                        <div className="w-full h-48 sm:h-64 overflow-hidden rounded-[14px] relative">
+                                            <img
+                                                src={item.image}
+                                                alt={item.title}
+                                                className="w-full h-full object-cover"
+                                            />
+                                            <div className="absolute inset-0 bg-black/5" />
+                                        </div>
+                                    </div>
+
                                     {/* Expanded Content (Visible only when active) */}
                                     <div className={`overflow-hidden transition-all duration-500 ease-in-out 
-                  ${isActive ? 'max-h-75 opacity-100' : 'max-h-0 opacity-0'}`}>
+                                ${isActive ? 'max-h-75 opacity-100' : 'max-h-0 opacity-0'}`}>
                                         <p className="text-[#44474C] text-sm font-secondary leading-relaxed max-w-[90%]">
                                             {item.desc}
                                         </p>
 
                                         <div className="flex items-center justify-between pt-6 mt-2">
-                                            <span className="font-bold text-[#050E1A] text-[16px]  ">From {item.price}</span>
+                                            <span className="font-bold text-[#050E1A] text-[16px]">From {item.price}</span>
                                             <ArrowRight size={20} className="text-[#050E1A]" />
                                         </div>
                                     </div>
@@ -98,8 +111,8 @@ export default function Journey() {
                     </div>
                 </div>
 
-                {/* RIGHT IMAGE: STICKY */}
-                <div className="w-full lg:w-2/3 h-screen sticky top-0 overflow-hidden">
+                {/* RIGHT IMAGE: STICKY ON DESKTOP, HIDDEN ON MOBILE (HANDLED VIA MOBILE INJECTION ABOVE) */}
+                <div className="hidden lg:block w-full lg:w-2/3 h-screen sticky top-0 overflow-hidden">
                     <div className="w-full h-150 overflow-hidden rounded-[18px] relative">
                         <img
                             key={sections[activeIndex].image}
@@ -112,8 +125,8 @@ export default function Journey() {
                     </div>
                 </div>
 
-                {/* BACKGROUND SCROLL TRACKER */}
-                <div className="absolute inset-0 pointer-events-none">
+                {/* BACKGROUND SCROLL TRACKER - HIDDEN ON MOBILE TO PREVENT EXTRA SPACERS */}
+                <div className="hidden lg:block absolute inset-0 pointer-events-none">
                     {sections.map((_, i) => (
                         <div key={i} className="h-screen w-full" />
                     ))}

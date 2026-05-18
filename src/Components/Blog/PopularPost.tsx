@@ -48,31 +48,31 @@ export const horizontalBlogArticles: HorizontalArticleData[] = [
 
 export default function PopularPost() {
     return (
-        <div className='px-25 py-18.75'>
+        <div className='px-4 lg:px-25 py-6 lg:py-18.75'>
             <div className='flex items-center justify-between'>
-                <h2 className='text-[48px] text-[#0D0D0D]'>Popular Posts</h2>
+                <h2 className='text-2xl lg:text-[48px] text-[#0D0D0D]'>Popular Posts</h2>
                 <Button text='View All' className='text-[12px] font-bold uppercase border-b border-black rounded-none' />
             </div>
 
-            <div className='grid grid-cols-2 items-center justify-between gap-8 py-12.5' >
+            <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4 lg:gap-8 py-6 lg:py-12.5' >
                 {
                     horizontalBlogArticles?.map((item, index) => (
-                        <div key={index} className='flex items-center justify-start gap-6'>
+                        <div key={index} className='flex items-center justify-start gap-4 lg:gap-6'>
                             <Image
                                 src={item?.imageSrc}
                                 alt={"/Blog/Images/story.png"}
                                 width={100}
                                 height={100}
-                                className="object-cover rounded-xl w-62.5 h-45 transition-transform duration-500"
+                                className="object-cover rounded-xl lg:w-62.5 h-35 lg:h-45 transition-transform duration-500"
                                 priority
                             />
-                            <div className='space-y-4'>
+                            <div className='space-y-2 lg:space-y-4'>
                                 <div className='flex items-center justify-start gap-4'>
                                     <p className='font-secondary text-sm text-[#0D0D0D]' >{item?.category}</p>
                                     <span className='w-5 h-px bg-black text-[#0D0D0D]'></span>
                                     <p className='font-secondary text-sm text-[#0D0D0D]'>{item?.date}</p>
                                 </div>
-                                <h2 className='text-[16px]'>{item?.title}</h2>
+                                <h2 className='text-sm lg:text-[16px]'>{item?.title}</h2>
                                 <Link href={item?.slug} className='text-[12px] font-bold uppercase border-b border-black rounded-none py-2' >Read More</Link>
                             </div>
                         </div>

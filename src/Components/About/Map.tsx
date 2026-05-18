@@ -44,14 +44,14 @@ const destinations: Destination[] = [
 
 export default function MapSection() {
     return (
-        <section className="relative w-full min-h-223 py-20 overflow-hidden">
+        <section className="relative w-full min-h-223 py-10 lg:py-20 overflow-hidden">
             {/* 1. Background Layer */}
             <div className="absolute inset-0 z-0">
                 <Image
                     src='/About/Images/map.png'
                     alt='World Map Background'
                     fill
-                    className='object-cover h-[180px] opacity-60'
+                    className='object-cover h-45 opacity-60'
                 />
                 <div className="absolute inset-0 bg-[#F0EBE1]/90 " />
             </div>
@@ -60,14 +60,14 @@ export default function MapSection() {
             <div className="relative z-10 max-w-7xl mx-auto px-6">
 
                 {/* Hero Text Section */}
-                <div className='flex flex-col items-center text-center mb-20 space-y-4'>
+                <div className='flex flex-col items-center text-center mb-10 lg:mb-20 space-y-4'>
                     <span className='text-[#C8913A] text-[12px] font-sans uppercase tracking-[3px] font-bold'>
                         Where We Take You
                     </span>
-                    <h2 className='text-5xl md:text-6xl text-[#131110] font-serif leading-tight'>
+                    <h2 className='text-2xl lg:text-6xl text-[#131110] font-serif leading-tight'>
                         Four regions. <br /> Infinite stories.
                     </h2>
-                    <p className='max-w-2xl text-[18px] text-[#2F2F2F] font-light leading-relaxed'>
+                    <p className='max-w-2xl text-sm lg:text-[18px] text-[#2F2F2F] font-light leading-relaxed'>
                         Every destination we operate in has been walked, tested, and loved by our team.
                     </p>
                 </div>
@@ -109,7 +109,7 @@ export default function MapSection() {
                                     href={item.link}
                                     className="inline-flex items-center text-[#C8913A] text-[11px] tracking-[0.2em] font-bold uppercase group/link w-fit"
                                 >
-                                    EXPLORE <ArrowRight size={12 } />
+                                    EXPLORE <ArrowRight size={12} />
                                 </Link>
                             </div>
                         </div>

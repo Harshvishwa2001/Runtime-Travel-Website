@@ -35,18 +35,18 @@ const specialHighlightsData: SpecialHighlight[] = [
 
 export default function PlanTrip() {
     return (
-        <div className="grid grid-cols-2 gap-20 px-44.5 py-25 items-center justify-center bg-[#F7F4F0]">
+        <div className="grid lg:grid-cols-2 lg:gap-20 px-6 lg:px-44.5 py-10 lg:py-25 items-center justify-center bg-[#F7F4F0]">
             <div className="border-l border-[#C8913A] pl-8.5">
-                <h2 className="italic text-[42px] leading-16 text-[#1A1A1A]">"We don't plan trips. <br /> We craft moments<br /> you'll retell<br /> for decades."</h2>
+                <h2 className="italic text-2xl lg:text-[42px] leading-8 lg:leading-16 text-[#1A1A1A]">"We don't plan trips. <br /> We craft moments<br /> you'll retell<br /> for decades."</h2>
             </div>
             <div className="">
                 {
                     specialHighlightsData?.map((item, index) => (
                         <div key={index} className="flex items-start justify-start gap-5 border-b border-[#E8E4DE] mt-7">
-                            <div className="w-10 h-10">{item?.iconType}</div>
-                            <div className="spacey-1 mb-7">
-                                <h2 className="text-[18px] text-[#1A1A1A]">{item?.title}</h2>
-                                <p className="text-sm text-[#888888]">{item?.description}</p>
+                            <div className="w-5 lg:w-10 h-5 lg:h-10">{item?.iconType}</div>
+                            <div className="space-y-1 mb-7">
+                                <h2 className="text-sm lg:text-[18px] text-[#1A1A1A]">{item?.title}</h2>
+                                <p className="text-[12px] lg:text-sm text-[#888888]">{item?.description}</p>
                             </div>
                         </div>
                     ))

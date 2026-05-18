@@ -4,7 +4,6 @@ import PopularPost from '@/Components/Blog/PopularPost'
 import StoryBehind from '@/Components/Blog/StoryBehind'
 import TravelShowcase from '@/Components/Blog/TravelShowcase'
 import SlideImage from '@/Components/Common/SlideImage'
-import React from 'react'
 
 export default function page() {
     return (

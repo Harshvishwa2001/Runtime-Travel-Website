@@ -27,8 +27,8 @@ export default function Button({
             aria-label={ariaLabel || text} // Fallback to text if ariaLabel isn't provided
             className={`
         text-[#050E1A] 
-        px-6 
-        py-3 
+        px-4 lg:px-6 
+        py-2 lg:py-3 
         rounded-md 
         inline-flex 
         items-center 

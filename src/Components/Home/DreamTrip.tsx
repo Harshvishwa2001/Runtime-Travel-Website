@@ -13,10 +13,10 @@ export default function DreamTrip() {
             />
 
             <div className="relative w-full h-150 items-center justify-center text-center px-4 overflow-hidden top-50">
-                <p className="items-center gap-2 text-white text-[60px]">
+                <p className="items-center gap-2 text-white text-3xl lg:text-[60px]">
                     Create Your Dream Trip
                 </p>
-                <Button text='Create Your Trip' className='text-[12px] font-arial uppercase tracking-wide px-12 mt-12 text-[#050E1A]' />
+                <Button text='Create Your Trip' className='text-[12px] bg-white font-arial uppercase tracking-wide px-12 mt-6 lg:mt-12 text-[#050E1A]' />
             </div>
         </div>
     )

@@ -22,30 +22,30 @@ export default function AboutBannner() {
                 }}
             />
 
-            <div className='absolute inset-0 top-37.25 flex flex-col justify-center px-10 md:px-25 space-y-10'>
+            <div className='absolute inset-0 top-37.25 flex flex-col justify-center px-10 lg:px-25 space-y-4 lg:space-y-10'>
 
                 {/* Heading */}
-                <h1 className='text-[50px] md:text-[70px] text-white leading-tight md:leading-18 font-serif'>
+                <h1 className='text-[24px] lg:text-[70px] text-white leading-tight lg:leading-18 font-serif'>
                     Crafted by wanderers. <br />
                     Designed for the <br />
                     <span className='text-[#FFB900]'>discerning.</span>
                 </h1>
 
                 {/* Description */}
-                <p className='max-w-xl text-[20px] md:text-xl text-white/90 font-secondary'>
+                <p className='max-w-xl text-[16px] lg:text-xl text-white/90 font-secondary'>
                     A full-service inbound tour operator with over 50 years of expertise —
                     curating extraordinary journeys across India, Nepal, Bhutan, and Sri Lanka.
                 </p>
 
                 {/* Tags Section */}
-                <div className='flex flex-wrap items-center justify-start gap-4'>
+                <div className='flex flex-wrap items-center justify-start gap-2 lg:gap-4'>
                     {tags.map((item, index) => (
                         <div
                             key={index}
                             className='px-4 py-2 bg-white/10 backdrop-blur-md flex items-center gap-3 rounded-sm border border-white/20'
                         >
                             <span className='w-1.5 h-1.5 bg-[#C8913A] rounded-full' />
-                            <p className='text-xs md:text-[16px] text-white font-medium uppercase tracking-widest'>
+                            <p className='text-[10px] lg:text-[16px] text-white font-medium uppercase tracking-widest'>
                                 {item.name}
                             </p>
                         </div>

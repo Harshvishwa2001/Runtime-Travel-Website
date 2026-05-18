@@ -68,12 +68,12 @@ export default function Footer() {
 
     return (
         <>
-            <div className='bg-white border-t p-20'>
-                <div className='grid grid-cols-3'>
-                    <div>
+            <div className='bg-white border-t p-4 lg:p-20'>
+                <div className='grid lg:grid-cols-3 gap-4'>
+                    <div className='flex items-center justify-center lg:justify-start'>
                         <Image src={'/Logo/footerlogo.png'} priority width={1000} height={1000} className='w-54 h-41' alt='Footer Logo' />
                     </div>
-                    <div className='flex flex-col items-start gap-4'>
+                    <div className='flex flex-col lg:items-start gap-4'>
                         <div className='flex items-center gap-4'>
                             <div className='flex items-center justify-center w-8 h-8 bg-[#E6E6E7] rounded-full flex-shrink-0'>
                                 <MapPin size={18} className='text-[#5A5A60]' />
@@ -115,44 +115,44 @@ export default function Footer() {
                 </div>
 
                 {/* Footer Link */}
-                <div className='grid grid-cols-4 py-10'>
+                <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 py-10'>
                     <div className=''>
-                        <p className='font-manrope text-sm uppercase tracking-wide'>Featured Destinations</p>
+                        <p className='font-manrope text-sm uppercase tracking-wide py-2 lg:py-1'>Featured Destinations</p>
                         {
                             featured.map((item, index) => (
-                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-4'>{item.name}</Link>
+                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-2 lg:mt-4'>{item.name}</Link>
                             ))
                         }
                     </div>
                     <div className=''>
-                        <p className='font-manrope text-sm uppercase tracking-wide'>Featured Destinations</p>
+                        <p className='font-manrope text-sm uppercase tracking-wide py-2 lg:py-1'>TRAVEL GUIDES</p>
                         {
                             guide.map((item, index) => (
-                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-4'>{item.name}</Link>
+                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-2 lg:mt-4'>{item.name}</Link>
                             ))
                         }
                     </div>
                     <div className=''>
-                        <p className='font-manrope text-sm uppercase tracking-wide'>Featured Destinations</p>
+                        <p className='font-manrope text-sm uppercase tracking-wide py-2 lg:py-1'>Inspirations</p>
                         {
                             inspirations.map((item, index) => (
-                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-4'>{item.name}</Link>
+                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-2 lg:mt-4'>{item.name}</Link>
                             ))
                         }
                     </div>
                     <div className=''>
-                        <p className='font-manrope text-sm uppercase tracking-wide'>Featured Destinations</p>
+                        <p className='font-manrope text-sm uppercase tracking-wide py-2 lg:py-1'>Travel East</p>
                         {
                             page.map((item, index) => (
-                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-4'>{item.name}</Link>
+                                <Link key={index} href={item.href} className='flex items-center text-[#433E3F] text-sm hover:font-bold transition-all duration-500 cursor-pointer font-manrope gap-2 mt-2 lg:mt-4'>{item.name}</Link>
                             ))
                         }
                     </div>
                 </div>
             </div>
-            <div className='py-10 px-25 flex justify-between border-t'>
+            <div className='py-4 lg:py-10 px-4 lg:px-25 flex justify-between border-t'>
                 {/* Social media */}
-                <div className="flex items-center gap-6">
+                <div className="flex items-center gap-2 lg:gap-6">
                     {socialmedia.map((item) => (
                         <Link
                             key={item.name}

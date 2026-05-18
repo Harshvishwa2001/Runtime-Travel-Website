@@ -16,29 +16,29 @@ const ExperienceData: ExperienceType[] = [
 
 export default function Experience() {
     return (
-        <div className='px-25 py-8'>
-            <h2 className='font-manrope font-semibold text-[48px] text-[#1F1B17]'>Experience Spotlight</h2>
-            <div className='mt-16 grid grid-cols-2 gap-12'>
+        <div className='px-4 lg:px-25 py-4 lg:py-8'>
+            <h2 className='font-manrope font-semibold text-2xl lg:text-[48px] text-[#1F1B17]'>Experience Spotlight</h2>
+            <div className='mt-8 lg:mt-16 grid lg:grid-cols-2 lg:gap-12'>
                 <div className='relative inset-0 overflow-hidden rounded-[32px]'>
-                    <Image src={"/Destination/Images/Experience.jpg"} alt='Experience' width={1000} height={1000} className='w-170  min-h-screen object-cover object-[70%_center] scale-125' />
+                    <Image src={"/Destination/Images/Experience.jpg"} alt='Experience' width={1000} height={1000} className='lg:w-170 h-100 lg:min-h-screen object-cover object-[70%_center] scale-125' />
                     <div className='absolute inset-0 bg-black/10 ' />
 
-                    <div className='absolute bottom-14 left-0 px-10 md:px-12 space-y-6 text-white'>
+                    <div className='absolute bottom-14 left-0 px-6 lg:px-12 space-y-6 text-white'>
                         <p className='text-[12px] font-bold tracking-widest uppercase font-manrope'>Signature Adventure</p>
-                        <h2 className='text-[48px] font-semibold leading-12 text-[#FFF8F4] font-manrope'>Sunset Over <br />the Thar</h2>
-                        <p className='border-l border-[#FFF8F44D] text-[#FFF8F4] text-[18px] font-light font-manrope pl-4 max-w-sm'>Traverse the golden dunes on a private camel trek, ending with a starlit feast curated by royal chefs.
+                        <h2 className='text-2xl lg:text-[48px] font-semibold lg:leading-12 text-[#FFF8F4] font-manrope'>Sunset Over <br />the Thar</h2>
+                        <p className='border-l border-[#FFF8F44D] text-[#FFF8F4] text-sm lg:text-[18px] font-light font-manrope pl-4 max-w-sm'>Traverse the golden dunes on a private camel trek, ending with a starlit feast curated by royal chefs.
                         </p>
-                        <Button text='Details & Booking' className='mt-4 font-manrope uppercase text-[12px]' />
+                        <Button text='Details & Booking' className='mt-4 font-manrope uppercase text-[12px] bg-white' />
                     </div>
                 </div>
-                <div className='py-10 flex flex-col'>
+                <div className='py-4 lg:py-10 flex flex-col'>
                     {
                         ExperienceData?.map((item, index) => (
                             <div key={index} className='flex items-center gap-8 pb-3.5 pt-8 border-b border-[#E9BCB533]'>
-                                <Image src={item?.img} width={1000} height={1000} alt={item?.title} className='w-32 h-40 rounded-[16px]' />
+                                <Image src={item?.img} width={1000} height={1000} alt={item?.title} className='w-32 h-30 lg:h-40 rounded-[16px]' />
                                 <div className='space-y-3'>
-                                    <h2 className='text-[24px] text-[#1F1B17] font-semibold font-manrope'>{item?.title}</h2>
-                                    <p className='text-sm font-light text-black font-manrope'>{item?.desc}</p>
+                                    <h2 className='text-lg lg:text-[24px] text-[#1F1B17] font-semibold font-manrope'>{item?.title}</h2>
+                                    <p className='text-[12px] lg:text-sm font-light text-black font-manrope'>{item?.desc}</p>
                                     <p className='text-[10px] text-[#243665] tracking-widest uppercase'>{item?.tag}</p>
                                 </div>
                             </div>

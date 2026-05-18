@@ -43,25 +43,25 @@ export default function SupportHero({ img, vid, title, subdesc, tag }: SupportHe
             <div className="relative z-10 max-w-4xl px-6 text-center text-white flex flex-col items-center">
 
                 {/* Main Heading */}
-                <h1 className="text-6xl md:text-[66px] font-light leading-[1.2] max-w-3xl mb-8 tracking-[-0.01em]">
+                <h1 className="text-2xl lg:text-[66px] font-light leading-[1.2] lg:max-w-3xl mb-4 lg:mb-8 tracking-[-0.01em]">
                     {title}
                 </h1>
 
                 {/* Subtitle / Descriptive text */}
-                <p className="text-[17px] font-secondary font-light text-white/65 leading-relaxed mb-12 max-w-xl">
+                <p className="text-sm lg:text-[17px] font-secondary font-light text-white/65 leading-relaxed mb-12 max-w-xl">
                     {subdesc}
                 </p>
 
                 {/* Sophisticated Gold Button (matching other components) */}
                 <Link
                     href="/create-trip"
-                    className="bg-[#C8913A] text-white font-sans text-[12px] tracking-[0.2em] uppercase py-4 px-12 rounded-sm transition-all duration-300 hover:bg-[#A6752D] hover:shadow-lg active:scale-95 mb-6"
+                    className="bg-[#C8913A] text-white font-sans text-[10px] lg:text-[12px] tracking-[0.2em] uppercase py-4 lg:py-4 px-4 lg:px-12 rounded-sm transition-all duration-300 hover:bg-[#A6752D] hover:shadow-lg active:scale-95 mb-6"
                 >
                     CREATE YOUR TRIP
                 </Link>
 
                 {/* Footnote Benefits */}
-                <span className="text-[11px] font-secondary font-medium uppercase text-white tracking-[0.25em]">
+                <span className="text-[10px] lg:text-[11px] font-secondary font-medium uppercase text-white tracking-[0.25em]">
                     {tag}
                 </span>
             </div>

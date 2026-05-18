@@ -19,7 +19,7 @@ export default function page() {
             <Accreditations />
             <GivingBack />
             <Map />
-            <SupportHero img={"/About/Images/support.jpg"} title='Ready to experience India like never before?' subdesc={`Let's design a journey that feels exactly like you.`} tag='TAILOR-MADE · PRIVATE DEPARTURES · 24/7 SUPPORT' />
+            <SupportHero img={"/About/Images/support.jpg"} vid='' title='Ready to experience India like never before?' subdesc={`Let's design a journey that feels exactly like you.`} tag='TAILOR-MADE · PRIVATE DEPARTURES · 24/7 SUPPORT' />
         </>
     )
 }

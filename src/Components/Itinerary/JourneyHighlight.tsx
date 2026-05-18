@@ -18,12 +18,12 @@ const JourneyHighlightData: JourneyHighlight[] = [
 
 export default function JourneyHighlight() {
     return (
-        <div className='px-25 py-25'>
+        <div className='px-4 lg:px-25 py-6 lg:py-25'>
             <div className='space-y-3.5'>
                 <p className='font-secondary text-[10px] text-[#C8913A]  uppercase text-center'>Journey Highlights</p>
-                <h2 className='text-[46.47px] text-[#1A1A1A] text-center'>Moments that define this journey.</h2>
+                <h2 className='text-2xl lg:text-[46.47px] text-[#1A1A1A] text-center'>Moments that define this journey.</h2>
             </div>
-            <div className='mt-16 grid grid-cols-3 gap-8 px-20'>
+            <div className='mt-4 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:px-20'>
                 {
                     JourneyHighlightData?.map((item, index) => (
                         <div key={index} className="space-y-4">

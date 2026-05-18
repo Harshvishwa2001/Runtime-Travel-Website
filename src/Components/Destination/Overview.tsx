@@ -21,14 +21,14 @@ const overviewData: OverviewType[] = [
 
 export default function Overview() {
     return (
-        <div className='px-25 py-27 grid grid-cols-2 gap-14.5'>
+        <div className='px-4 lg:px-25 py-8 lg:py-27 grid lg:grid-cols-2 gap-4 lg:gap-14.5'>
             <div className='space-y-6'>
                 <p className='text-[10px] font-extrabold font-manrope uppercase text-[#243665] tracking-[0.2rem]'>The Blue City</p>
-                <h2 className='text-[48px] font-manrope  leading-12 text-[#050E1A]'>
+                <h2 className='text-2xl lg:text-[48px] font-manrope leading-8 lg:leading-12 text-[#050E1A]'>
                     A tapestry of cobalt alleys and sandstone fortresses.
                 </h2>
 
-                <p className='font-arial text-[20px] text-[#1A1C1CB2]'>
+                <p className='font-arial text-sm lg:text-[20px] text-[#1A1C1CB2]'>
                     Rising like a desert mirage against the scorched Thar sands, Jodhpur—
                     the Sun City—is a living chronicle of Marwar bravery. Every street is a
                     brushstroke of indigo, a tradition started by the Brahmins to keep
@@ -41,13 +41,13 @@ export default function Overview() {
                 </p>
             </div>
 
-            <div className='grid grid-cols-2 py-12 gap-6.5'>
+            <div className='grid grid-cols-2 py-2 lg:py-12 gap-6.5'>
                 {
                     overviewData?.map((item, index) => (
-                        <div key={index} className='space-y-2 px-10 py-15'>
+                        <div key={index} className='space-y-2 px-4 lg:px-10 py-4 lg:py-15'>
                             <div className='w-5 h-5'>{item?.icon}</div>
                             <p className='text-[#1A1C1C66] text-[10px] font-manrope font-extrabold uppercase tracking-[0.1rem] pt-4'>{item?.text}</p>
-                            <p className='text-[#1A1C1C] text-[18px] font-manrope font-bold'>{item?.subtext}</p>
+                            <p className='text-[#1A1C1C] text-sm lg:text-[18px] font-manrope font-bold'>{item?.subtext}</p>
 
                         </div>
                     ))

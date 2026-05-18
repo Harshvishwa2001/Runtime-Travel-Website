@@ -55,16 +55,16 @@ const features: FeatureItem[] = [
 
 export default function Reason() {
     return (
-        <div className='px-25 py-10'>
-            <h2 className='text-[36px] text-[#1F1B17] font-semibold font-manrope text-center py-6'>Reasons to Fall in Love</h2>
+        <div className='px-4 lg:px-25 py-4 lg:py-10'>
+            <h2 className='text-2xl lg:text-[36px] text-[#1F1B17] font-semibold font-manrope text-center py-6'>Reasons to Fall in Love</h2>
 
-            <div className="grid grid-cols-4 items-start gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 items-start gap-4">
                 {
                     features?.map((item, index) => (
-                        <div key={index} className="bg-[#EDF2FF99] h-46 p-8 space-y-4 rounded-[16px] flex flex-col items-center justify-center">
+                        <div key={index} className="bg-[#EDF2FF99] h-46 p-2 lg:p-8 space-y-4 rounded-[16px] flex flex-col items-center justify-center">
                             <div className="w-8 h-8 text-[#243665]">{item?.icon}</div>
                             <h2 className="text-sm text-[#243665] font-manrope font-bold tracking-widest uppercase">{item?.title}</h2>
-                            <p className="text-sm text-black font-manrope text-center">{item?.description}</p>
+                            <p className="text-[12px] lg:text-sm text-black font-manrope text-center">{item?.description}</p>
                         </div>
                     ))
                 }

@@ -18,10 +18,10 @@ const StoryData = [
 
 export default function OperateStories() {
     return (
-        <div className='px-25 py-18.75 space-y-5'>
+        <div className='px-4 lg:px-25 py-6 lg:py-18.75 space-y-3 lg:space-y-5'>
             <HeaderTags data={{ name: "Where We Operate" }} />
-            <h2 className='text-[52px] leading-14'>Four regions. <br /> Infinite stories.</h2>
-            <div className='grid grid-cols-5 relative gap-4'>
+            <h2 className='text-3xl lg:text-[52px] leading-10 lg:leading-14'>Four regions. <br /> Infinite stories.</h2>
+            <div className='grid grid-cols-2 lg:grid-cols-5 relative gap-4'>
                 {
                     StoryData.map((item, index) => (
                         <div key={index} className='relative'>

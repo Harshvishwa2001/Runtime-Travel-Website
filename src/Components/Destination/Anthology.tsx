@@ -12,44 +12,44 @@ const galleryItems: GalleryItem[] = [
   {
     title: "DESERT",
     src: "/Destination/Images/vis1.jpg",
-    className: "md:col-span-2 h-[338px]",
+    className: "lg:col-span-2 h-[338px]",
   },
   {
     title: "BLUE GATE",
     src: "/Destination/Images/vis2.jpg",
-    className: "md:col-span-1 h-[241px]",
+    className: "lg:col-span-1 h-[241px]",
   },
   {
     title: "SPICES MARKET",
     src: "/Destination/Images/vis3.png",
-    className: "md:col-span-2 h-[338px]",
+    className: "lg:col-span-2 h-[338px]",
   },
   {
     title: "MAJESTY",
     src: "/Destination/Images/vis4.png",
-    className: "md:col-span-1 h-[440px] -mt-25",
+    className: "lg:col-span-1 h-[440px] -mt-25",
   },
 ];
 
 export default function VisualAnthology() {
   return (
-    <section className="max-w-full mx-auto px-25 py-12 bg-white">
+    <section className="max-w-full mx-auto px-4 lg:px-25 py-0 lg:py-12 bg-white">
       <div className="flex justify-between items-end mb-10">
         <div>
-          <h2 className="text-[56px] font-semibold font-manrope text-[#1A2B48] leading-tight">
+          <h2 className="text-2xl lg:text-[56px] font-semibold font-manrope text-[#1A2B48] leading-tight">
             Visual Anthology
           </h2>
-          <p className="text-gray-600 text-[18px] mt-2">
+          <p className="text-gray-600 text-sm lg:text-[18px] mt-2">
             A curated collection of moments that capture the essence of the soul.
           </p>
         </div>
 
         <div className="flex flex-col items-end gap-4">
           <div className="flex gap-2 items-end">
-            <button className="p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors">
+            <button className="p-1.5 lg:p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors">
               <ChevronLeft size={20} />
             </button>
-            <button className="p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors">
+            <button className="p-1.5 lg:p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors">
               <ChevronRight size={20} />
             </button>
           </div>
@@ -58,7 +58,7 @@ export default function VisualAnthology() {
 
       <section className="max-w-full mx-auto">
         {/* Grid Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5">
           {galleryItems.map((item, index) => (
             <div
               key={index}
@@ -73,11 +73,11 @@ export default function VisualAnthology() {
               />
 
               {/* Exact Typography match for image_9564fb.jpg */}
-              <div className="absolute bottom-8 right-10">
-                <h3 className="text-white text-[32px] md:text-[36px] font-arial font-black tracking-tight leading-none uppercase">
+              <div className="absolute bottom-8 right-4 lg:right-10">
+                <h3 className="text-white text-[18px] lg:text-[36px] font-arial font-semibold lg:font-black tracking-tight leading-none uppercase">
                   {item.title}
                 </h3>
-              </div>
+              </div>  
             </div>
           ))}
         </div>

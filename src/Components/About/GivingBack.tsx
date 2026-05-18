@@ -20,21 +20,21 @@ const givingData: GivingTags[] = [
 export default function GivingBack() {
     return (
         <div className='relative'>
-            <Image src={'/About/Images/giving.jpg'} width={1000} height={1000} alt='Giving Back' className='w-full max-h-247.75 object-cover' />
+            <Image src={'/About/Images/giving.jpg'} width={1000} height={1000} alt='Giving Back' className='w-full h-screen lg:max-h-247.75 object-cover' />
             <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
-            <div className='absolute inset-0 max-w-115 mx-25 my-25 space-y-8'>
+            <div className='absolute inset-0 lg:max-w-115 px-4 lg:px-25 py-14 lg:py-25 space-y-4 lg:space-y-8'>
                 <HeaderTags data={{ name: "Giving Back" }} />
-                <h2 className='text-[56px] leading-14 text-white'>Travel that gives back more than it <span className='text-[#E8B870]'>takes.</span>
+                <h2 className='text-xl lg:text-[56px] lg:leading-14 text-white'>Travel that gives back more than it <span className='text-[#E8B870]'>takes.</span>
                 </h2>
 
-                <p className='text-[20px] font-secondary text-white/55'>Responsible tourism is not a policy for us — it is how we operate. From the communities we move through to the environments we visit, every journey we design carries a commitment to leave things better.</p>
+                <p className='text-sm lg:text-[20px] font-secondary text-white/55'>Responsible tourism is not a policy for us — it is how we operate. From the communities we move through to the environments we visit, every journey we design carries a commitment to leave things better.</p>
 
                 {
                     givingData.map((item, index) => (
                         <div key={index} className='flex items-start gap-2'>
                             <span>{item?.icon}</span>
                             <div className='flex items-center'>
-                                <p className='text-[16px] text-white/60 font-sans'><span className='font-bold font-primary text-white/80'>{item?.title}</span> — {item?.desc}</p>
+                                <p className='text-sm lg:text-[16px] text-white/60 font-sans'><span className='font-bold font-primary text-white/80'>{item?.title}</span> — {item?.desc}</p>
                             </div>
                         </div>
                     ))

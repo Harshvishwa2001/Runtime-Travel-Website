@@ -14,10 +14,10 @@ export default function RunningTags() {
 
     return (
         <div className="w-full bg-[#C8913A] overflow-hidden slide-window">
-            <div className="flex items-center justify-between py-4 px-4 min-w-max image-track">
+            <div className="flex items-center justify-between py-4 px-4 min-w-max image-track overflow-x-hidden">
                 {tripleData.map((item, index) => (
                     <div key={index} className="flex items-center group">
-                        <div className="flex items-center gap-3 px-15 border-l border-white/40">
+                        <div className="flex items-center gap-3 px-15 border-l border-white/40 overflow-hidden">
                             {/* The Circular Icon */}
                             <div className="w-2.5 h-2.5 border border-white/80 rounded-full shrink-0" />
 

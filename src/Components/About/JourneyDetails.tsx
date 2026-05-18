@@ -33,7 +33,7 @@ export default function JourneyDetails() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div className="flex w-full h-150 bg-white overflow-hidden font-serif">
+        <div className="flex flex-col lg:flex-row w-full min-h-[500px] lg:h-150 bg-white overflow-hidden font-serif">
             {sections.map((section, index) => {
                 const isActive = activeIndex === index;
 
@@ -41,7 +41,12 @@ export default function JourneyDetails() {
                     <div
                         key={section.id}
                         onClick={() => setActiveIndex(index)}
-                        className={`relative h-full transition-all duration-800 ease-in-out cursor-pointer border-l border-gray-100 first:border-l-0 ${isActive ? "flex-4" : "flex-[0.5] min-w-61.25"
+                        /* UI FIX: Handles mobile vertical stacking sizing versus desktop horizontal expansion sizing */
+                        className={`relative transition-all duration-800 ease-in-out cursor-pointer 
+                        border-t lg:border-t-0 lg:border-l border-gray-100 first:border-t-0 lg:first:border-l-0 
+                        ${isActive
+                                ? "flex-[3] lg:flex-4 h-[380px] lg:h-full"
+                                : "flex-[0.5] lg:flex-[0.5] min-h-[65px] lg:min-w-61.25 h-[65px] lg:h-full"
                             }`}
                     >
 
@@ -58,12 +63,12 @@ export default function JourneyDetails() {
                         </div>
 
                         {/* Active Content */}
-                        <div className={`relative top-20 z-10 p-12  flex flex-col justify-center h-full space-y-4.5 max-w-xl text-white transition-all duration-700 ${isActive ? "opacity-100 translate-x-0 delay-300" : "opacity-0 -translate-x-4 pointer-events-none"
+                        <div className={`relative lg:top-20 z-10 p-6 md:p-12 flex flex-col justify-center h-full space-y-4.5 max-w-xl text-white transition-all duration-700 ${isActive ? "opacity-100 translate-x-0 delay-300" : "opacity-0 -translate-x-4 pointer-events-none"
                             }`}>
                             <span className="text-[#C8913A] text-[10px] tracking-widest uppercase font-sans ">
                                 {section.id} — {section.label}
                             </span>
-                            <h2 className="text-[38px] leading-tight font-primary">
+                            <h2 className="text-[28px] md:text-[38px] leading-tight font-primary">
                                 {section.title} <br />
                                 <span className="italic font-light text-[#E8B870]">{section.subtitle}</span>
                             </h2>
@@ -72,19 +77,19 @@ export default function JourneyDetails() {
                             </p>
                         </div>
 
-                        {/* Collapsed View (Vertical Text) */}
-                        <div className={`absolute inset-0 flex flex-col items-center justify-center py-12 transition-opacity duration-500 ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"
+                        {/* Collapsed View */}
+                        <div className={`absolute inset-0 flex flex-row lg:flex-col items-center justify-between lg:justify-center px-6 lg:px-0 py-0 lg:py-12 transition-opacity duration-500 ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"
                             }`}>
-                            <span className="text-[#C8913A] text-[44px] mb-8 font-extralight">
+                            <span className="text-[#C8913A] text-2xl lg:text-[44px] lg:mb-8 font-extralight">
                                 {section.id}
                             </span>
                             <p
-                                className="uppercase tracking-[0.3em] text-sm text-[#131110] whitespace-nowrap"
-                                style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+                                className="uppercase tracking-[0.3em] text-xs lg:text-sm text-[#131110] whitespace-nowrap"
+                                style={typeof window !== 'undefined' && window.innerWidth >= 1024 ? { writingMode: 'vertical-rl', transform: 'rotate(180deg)' } : {}}
                             >
                                 {section.label}
                             </p>
-                            <div className="mt-8 w-px h-20 bg-[#C8913A]/30" />
+                            <div className="hidden lg:block mt-8 w-px h-20 bg-[#C8913A]/30" />
                         </div>
                     </div>
                 );

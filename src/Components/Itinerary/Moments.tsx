@@ -41,10 +41,10 @@ const itineraryDays = [
 
 export default function Moments() {
     return (
-        <section className="py-24 bg-white">
+        <section className="py-10 lg:py-24 bg-white">
             <p className='font-secondary text-[10px] text-[#C8913A]  uppercase text-center'>The Journey</p>
-            <h2 className='text-[46.47px] text-[#1A1A1A] text-center mb-15'>Day by day. Moment by moment.</h2>
-            <div className="mx-auto pl-25">
+            <h2 className='text-2xl lg:text-[46.47px] text-[#1A1A1A] text-center mb-6 lg:mb-15'>Day by day. Moment by moment.</h2>
+            <div className="mx-auto pl-4 lg:pl-25">
                 <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={30}
@@ -62,7 +62,7 @@ export default function Moments() {
                             <div className="flex flex-col h-full group ">
 
                                 {/* Card Image */}
-                                <div className="relative w-full min-h-113.25 overflow-hidden rounded-2xl mb-8">
+                                <div className="relative w-full h-80 lg:min-h-113.25 overflow-hidden rounded-2xl mb-8">
                                     <Image
                                         src={item.image}
                                         alt={item.title}
@@ -73,15 +73,15 @@ export default function Moments() {
                                 </div>
 
                                 {/* Card Text Content */}
-                                <div className="flex flex-col grow space-y-4 px-10">
-                                    <span className="text-[12px] tracking-[0.2em] uppercase text-[#75777C] font-arial">
+                                <div className="flex flex-col grow space-y-2 lg:space-y-4 px-4 lg:px-10">
+                                    <span className="text-[10px] lg:text-[12px] tracking-[0.2em] uppercase text-[#75777C] font-arial">
                                         {item.day}
                                     </span>
 
-                                    <h3 className="text-2xl font-manrope text-[#050E1A] tracking-wide">
+                                    <h3 className="text-lg lg:text-2xl font-manrope text-[#050E1A] tracking-wide">
                                         {item.title}
                                     </h3>
-                                    <p className="text-sm text-[#44474C] leading-relaxed font-arial grow">
+                                    <p className="text-[12px] lg:text-sm text-[#44474C] leading-relaxed font-arial grow">
                                         {item.description}
                                     </p>
 

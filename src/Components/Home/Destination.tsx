@@ -33,17 +33,17 @@ export default function Destination() {
     const AUTOPLAY_DELAY = 5000;
 
     return (
-        <div className="bg-white py-20">
+        <div className="bg-white py-0 lg:py-20">
             {/* Header Section */}
-            <div className='max-w-full mx-auto px-25 mb-12'>
-                <h2 className='text-[48px] text-[#1A1A1A] font-serif'>Discover Destinations</h2>
-                <p className='max-w-xl font-manrope text-[#6A7282] text-[16px]'>
+            <div className='max-w-full mx-auto px-4 lg:px-25 mb-12'>
+                <h2 className='text-2xl lg:text-[48px] text-[#1A1A1A] font-serif'>Discover Destinations</h2>
+                <p className='max-w-xl font-manrope text-[#6A7282] text-sm lg:text-[16px]'>
                     Curated experiences that transcend travel, offering deep immersion into local culture,
                     history, and unparalleled luxury.
                 </p>
             </div>
 
-            <div className="max-w-full mx-auto pl-25">
+            <div className="max-w-full mx-auto pl-6 lg:pl-25">
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={30}
@@ -75,7 +75,7 @@ export default function Destination() {
                                         <p className="text-[10px] tracking-[0.25em] font-semibold opacity-80 mb-2 uppercase">
                                             {slide.category}
                                         </p>
-                                        <h3 className="text-[38px] md:text-[42px] font-serif leading-tight">
+                                        <h3 className="text-[38px] lg:text-[42px] font-serif leading-tight">
                                             {slide.title}
                                         </h3>
                                     </div>

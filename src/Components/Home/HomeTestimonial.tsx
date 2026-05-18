@@ -38,8 +38,8 @@ export default function HomeTestimonial() {
     const swiperRef = useRef<SwiperType | null>(null);
 
     return (
-        <div className='py-18.75 flex flex-col items-center justify-center overflow-hidden'>
-            <h2 className='text-[48px] text-[#1A1A1A]'>Voices of the Discerning</h2>
+        <div className='py-16 lg:py-18.75 px-4 flex flex-col items-center justify-center overflow-hidden'>
+            <h2 className='text-2xl lg:text-[48px] text-[#1A1A1A]'>Voices of the Discerning</h2>
 
             <div className="max-w-2xl w-full relative">
                 <Swiper
@@ -54,10 +54,10 @@ export default function HomeTestimonial() {
                     {testimonials.map((t, index) => (
                         <SwiperSlide key={index}>
                             <div className="flex flex-col items-center">
-                                <p className='text-2xl italic pt-16.75 text-center'>
+                                <p className='text-lg lg:text-2xl italic pt-16.75 text-center'>
                                     {t.text}
                                 </p>
-                                <div className="flex flex-col items-center justify-center py-10">
+                                <div className="flex flex-col items-center justify-center py-6 lg:py-10">
                                     <Image
                                         src={t.image}
                                         width={100}
@@ -81,13 +81,13 @@ export default function HomeTestimonial() {
                 <div className="flex gap-10 justify-center">
                     <button
                         onClick={() => swiperRef.current?.slidePrev()}
-                        className="w-12 h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
+                        className="w-10 lg:w-12 h-10 lg:h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
                     >
                         <GoArrowLeft size={22} />
                     </button>
                     <button
                         onClick={() => swiperRef.current?.slideNext()}
-                        className="w-12 h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
+                        className="w-10 lg:w-12 h-10 lg:h-12 rounded-xl border flex items-center justify-center hover:bg-gray-50 transition-colors cursor-pointer"
                     >
                         <GoArrowRight size={22} />
                     </button>

@@ -16,7 +16,7 @@ export default function page() {
             <VistingTime />
             <VisualAnthology />
             <Reason />
-            <SupportHero title="Ready to experience Jodhpur like never before?" img="/Destination/Images/dest.jpg" subdesc="" tag="" />
+            <SupportHero vid="" title="Ready to experience Jodhpur like never before?" img="/Destination/Images/dest.jpg" subdesc="" tag="" />
             <SlideImage />
         </>
     )

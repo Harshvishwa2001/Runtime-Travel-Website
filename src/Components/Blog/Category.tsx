@@ -45,7 +45,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
             </div>
 
 
-            <h3 className="mt-2 text-[30px] text-gray-900  tracking-wide hover:text-blue-600 transition-colors">
+            <h3 className="mt-2 text-lg lg:text-[30px] text-gray-900  tracking-wide hover:text-blue-600 transition-colors">
                 {title}
             </h3>
         </div>
@@ -54,22 +54,22 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
 
 export default function Category() {
     return (
-        <div className='px-25'>
+        <div className='px-4 lg:px-25'>
             <div className='flex items-center justify-between'>
-                <h2 className='text-[48px] text-[#0D0D0D]'>Explore Categories</h2>
+                <h2 className='text-2xl lg:text-[48px] text-[#0D0D0D]'>Explore Categories</h2>
                 <Button text='View All' className='text-[12px] font-bold uppercase border-b border-black rounded-none' />
             </div>
-            <div className='flex items-center justify-start gap-3.5 py-12.5'>
+            <div className='flex items-center justify-start gap-2 lg:gap-3.5 py-6 lg:py-12.5 overflow-hidden'>
                 {
                     Categorydata.map((item, index) => (
                         <div key={index} >
-                            <button className='text-[20px] text-[#0D0D0D] border border-[#D6D6D6] font-secondary rounded-lg px-4 py-1' >{item}</button>
+                            <button className='text-sm lg:text-[20px] text-[#0D0D0D] border border-[#D6D6D6] font-secondary rounded-lg px-4 py-1' >{item}</button>
                         </div>
                     ))
                 }
             </div>
 
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 items-start">
+            <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-4 lg:gap-y-12 items-start">
 
                 {/* Left Column Stack */}
                 <div className="flex flex-col gap-12 w-full">
@@ -78,14 +78,14 @@ export default function Category() {
                         category="Venture"
                         date="14 Jun, 2024"
                         title="Adventures Across Continents: Journeys of a Lifetime"
-                        imageHeightClass="h-[589px]"
+                        imageHeightClass="h-[300px] lg:h-[589px]"
                     />
                     <ArticleCard
                         imageSrc="/Blog/Images/cat4.png"
                         category="Thrive"
                         date="30 May, 2024"
                         title="Life Lessons: Insights and Stories of Personal Growth"
-                        imageHeightClass="h-[401px]"
+                        imageHeightClass="h-[300px] lg:h-[401px]"
                     />
                 </div>
 
@@ -96,14 +96,14 @@ export default function Category() {
                         category="Calm"
                         date="02 Dec, 2023"
                         title="Mindful Moments: Embracing Peace and Presence Daily"
-                        imageHeightClass="h-[340px]"
+                        imageHeightClass="h-[240px] lg:h-[340px]"
                     />
                     <ArticleCard
                         imageSrc="/Blog/Images/cat3.png"
                         category="Legacy"
                         date="18 Mar, 2023"
                         title="Historical Horizons: Stories from Our Collective Past"
-                        imageHeightClass="h-[650px]"
+                        imageHeightClass="h-[450px] lg:h-[650px]"
                     />
                 </div>
 

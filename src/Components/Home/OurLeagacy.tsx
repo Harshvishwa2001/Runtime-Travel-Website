@@ -29,28 +29,28 @@ const travel: TravelItem[] = [
 export default function OurLeagacy() {
     return (
         <>
-            <div className='grid grid-cols-2 gap-10 py-20 px-25'>
-                <div className='space-y-10'>
-                    <h2 className='text-[60px] leading-16'>Why travel with <br />Travel East</h2>
-                    <p className='text-[#6A7282] w-87.25'>For three decades we have bridged the gap
+            <div className='grid lg:grid-cols-2 gap-10 py-10 lg:py-20 px-4 lg:px-25'>
+                <div className='space-y-4 lg:space-y-10'>
+                    <h2 className='text-3xl lg:text-[60px] leading-10 lg:leading-16'>Why travel with <br />Travel East</h2>
+                    <p className='text-[#6A7282] lg:w-87.25 font-secondary text-sm lg:text-[18px]'>For three decades we have bridged the gap
                         between the curious traveler and the guarded
                         secrets of the orient</p>
                     <button className='flex gap-6 items-center'><BsArrowRight size={20} className='w-10 h-10 p-2 rounded-full border' /> Our Legacy</button>
-                    <div className='border-l mt-20 pl-6 border-black leading-10'>
-                        <p className='text-[#243665] text-[18px]'>Founding Ethos</p>
-                        <p className='text-2xl'>Preservation through exploration.</p>
+                    <div className='border-l lg:mt-20 pl-6 border-black leading-10'>
+                        <p className='text-[#243665] text-sm lg:text-[18px]'>Founding Ethos</p>
+                        <p className='text-lg lg:text-2xl'>Preservation through exploration.</p>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 lg:gap-6 xl:gap-13.75'>
+                <div className='grid grid-cols-2 gap-4 lg:gap-6 xl:gap-13.75'>
                     {
                         travel.map((item, index) => (
                             <div key={index} className='space-y-4'>
                                 <div className='flex items-center justify-between'>
-                                    <p className='text-2xl text-[#FED97B]'>0{index + 1}</p>
-                                    <FiUsers size={22} />
+                                    <p className='text-lg lg:text-2xl text-[#FED97B]'>0{index + 1}</p>
+                                    <span className=' w-4 lg:w-8 h-4 lg:h-8'>{item?.icon}</span>
                                 </div>
-                                <p className='text-2xl text-[#0B1628]'>{item.name}</p>
-                                <p className='text-[16px] text-[#6A7282]'>{item.desc}</p>
+                                <p className='text-lg lg:text-2xl text-[#0B1628]'>{item.name}</p>
+                                <p className='text-[12px] text-[24px] lg:text-[70px] text-white lg:text-[16px] text-[#6A7282]'>{item.desc}</p>
                             </div>
                         ))
                     }

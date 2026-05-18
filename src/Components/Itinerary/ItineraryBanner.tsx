@@ -54,19 +54,19 @@ export default function ItineraryBanner() {
                         width={1000}
                         height={1000}
                         priority
-                        className="object-cover w-full -scale-x-100"
+                        className="object-cover w-full h-screen -scale-x-100"
                     />
                 </div>
 
                 <div className="absolute container lg:mt-10 xl:mt-40 px-6 lg:px-12 xl:px-25 text-white space-y-7">
                     <div className="flex items-center gap-4 ">
-                        <div className="h-px w-8 md:w-12 bg-white/60"></div>
-                        <p className="text-[9px] md:text-[11px] tracking-[0.2em] uppercase font-sans font-medium text-white">
+                        <div className="h-px w-8 lg:w-12 bg-white/60"></div>
+                        <p className="text-[9px] lg:text-[11px] tracking-[0.2em] uppercase font-sans font-medium text-white">
                             {data.journeyDetails}
                         </p>
                     </div>
 
-                    <h1 className="text-[28px] md:text-[48px] lg:text-[68px] w-113 leading-none tracking-tight">
+                    <h1 className="text-[24px] md:text-[48px] lg:text-[68px] w-113 leading-none tracking-tight">
                         {data.title.main}
                         <span className="italic font-bold">{data.title.accent}</span>
                     </h1>
@@ -75,7 +75,7 @@ export default function ItineraryBanner() {
                         {data.subtitle}
                     </p>
 
-                    <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] md:text-[11px] tracking-[0.2em] uppercase font-semibold text-white">
+                    <nav className="flex flex-wrap items-center gap-x-4 gap-y-2 text-[10px] lg:text-[11px] tracking-[0.2em] uppercase font-semibold text-white">
                         {data.cities.map((city, index) => (
                             <div key={city} className="flex items-center gap-x-4">
                                 <span className="hover:text-white cursor-pointer transition-all duration-300">
@@ -90,18 +90,18 @@ export default function ItineraryBanner() {
                 </div>
             </div>
 
-            <div className="w-full border-b border-[#24366566] bg-white px-10 py-10">
+            <div className="w-full border-b border-[#24366566] bg-white lg:px-10 py-4 lg:py-10">
                 <div className="container mx-auto">
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 divide-x divide-gray-200">
+                    <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-8 divide-x divide-gray-200">
                         {tripFacts.map((fact, index) => (
                             <div
                                 key={index}
-                                className="flex flex-col items-center justify-center py-1 px-4 text-center"
+                                className="flex flex-col items-center justify-center py-1 px-2 lg:px-4 text-center"
                             >
                                 <span className="text-[9px] uppercase tracking-[0.2em] text-[#243665] font-secondary mb-2">
                                     {fact.label}
                                 </span>
-                                <span className="text-sm md:text-[18px] text-[#1A1A1A]">
+                                <span className="text-sm lg:text-[18px] text-[#1A1A1A]">
                                     {fact.value}
                                 </span>
                             </div>

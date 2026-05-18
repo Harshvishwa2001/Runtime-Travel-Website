@@ -17,7 +17,7 @@ export default function page() {
             <JourneyHighlight />
             <JourneyPath />
             <PlanTrip />
-            <SupportHero img='/Itinerary/Images/footer.jpg' title='Ready to experience the Himalayas?' subdesc={`This journey is waiting. Let's make it yours.`} tag='Private departures available year-round' />
+            <SupportHero vid='' img='/Itinerary/Images/footer.jpg' title='Ready to experience the Himalayas?' subdesc={`This journey is waiting. Let's make it yours.`} tag='Private departures available year-round' />
         </>
     )
 }
