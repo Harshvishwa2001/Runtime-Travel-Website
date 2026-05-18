@@ -20,9 +20,9 @@ const givingData: GivingTags[] = [
 export default function GivingBack() {
     return (
         <div className='relative'>
-            <Image src={'/About/Images/giving.jpg'} width={1000} height={1000} alt='Giving Back' className='w-full h-screen lg:max-h-247.75 object-cover' />
+            <Image src={'/About/Images/giving.jpg'} width={1000} height={1000} alt='Giving Back' className='w-full h-screen lg:min-h-240 object-cover' />
             <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/40 to-transparent" />
-            <div className='absolute inset-0 lg:max-w-185 px-4 lg:px-25 py-14 lg:py-25 space-y-4 lg:space-y-8'>
+            <div className='absolute inset-0 md:max-w-200 lg:max-w-185 px-4 lg:px-25 py-14 lg:py-25 space-y-4 lg:space-y-8'>
                 <HeaderTags data={{ name: "Giving Back" }} />
                 <h2 className='text-xl lg:text-[56px] lg:leading-14 text-white'>Travel that gives back more than it <span className='text-[#E8B870]'>takes.</span>
                 </h2>
