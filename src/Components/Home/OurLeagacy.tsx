@@ -50,7 +50,7 @@ export default function OurLeagacy() {
                                     <span className=' w-4 lg:w-8 h-4 lg:h-8'>{item?.icon}</span>
                                 </div>
                                 <p className='text-lg lg:text-2xl text-[#0B1628]'>{item.name}</p>
-                                <p className='text-[12px] text-[24px] lg:text-[70px] text-white lg:text-[16px] text-[#6A7282]'>{item.desc}</p>
+                                <p className='text-[12px] font-secondary lg:text-[16px] text-[#6A7282]'>{item.desc}</p>
                             </div>
                         ))
                     }
