@@ -81,7 +81,7 @@ export default function Destination() {
                                     </div>
 
                                     <div className="mt-4 overflow-hidden h-0 group-hover:h-12 transition-all duration-500 ease-out opacity-0 group-hover:opacity-100">
-                                        <button className="flex items-center gap-2 text-white text-sm font-medium tracking-widest uppercase border-b border-white/40 pb-1 hover:border-white transition-colors">
+                                        <button className="flex items-center gap-2 text-white text-sm font-medium tracking-widest uppercase border-b border-white/40 pb-1 hover:border-white transition-colors cursor-pointer">
                                             Explore More
                                             <ArrowRightIcon size={14} />
                                         </button>

@@ -51,7 +51,7 @@ export default function PopularPost() {
         <div className='px-4 lg:px-25 py-6 lg:py-18.75'>
             <div className='flex items-center justify-between'>
                 <h2 className='text-2xl lg:text-[48px] text-[#0D0D0D]'>Popular Posts</h2>
-                <Button text='View All' className='text-[12px] font-bold uppercase border-b border-black rounded-none' />
+                <Button text='View All' className='text-[12px] font-bold uppercase border-b border-black rounded-none cursor-pointer' />
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4 lg:gap-8 py-6 lg:py-12.5' >

@@ -54,7 +54,7 @@ export default function Header() {
 
                     <button
                         onClick={() => setMobileMenuOpen(true)}
-                        className="lg:hidden p-2 text-white hover:opacity-80 transition-opacity"
+                        className="lg:hidden p-2 text-white hover:opacity-80 transition-opacity cursor-pointer"
                         aria-label="Open Menu"
                     >
                         <Menu className="w-6 h-6" />
@@ -125,7 +125,7 @@ export default function Header() {
                             <img src="/Logo/Logo.png" alt="Logo" className="h-10 object-contain brightness-0 filter" />
                             <button
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="p-2 text-gray-500 hover:text-gray-900 transition-colors"
+                                className="p-2 text-gray-500 hover:text-gray-900 transition-colors cursor-pointer"
                             >
                                 <X className="w-6 h-6" />
                             </button>
@@ -139,7 +139,7 @@ export default function Header() {
                                         <div>
                                             <button
                                                 onClick={() => toggleDropdown(link.name)}
-                                                className="flex items-center justify-between w-full text-left py-3 font-primary text-sm text-[#050E1A] tracking-wider"
+                                                className="flex items-center justify-between w-full text-left py-3 font-primary text-sm text-[#050E1A] tracking-wider cursor-pointer"
                                             >
                                                 <span>{link.name}</span>
                                                 <ChevronDown className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />

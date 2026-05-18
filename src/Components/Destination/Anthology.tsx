@@ -46,10 +46,10 @@ export default function VisualAnthology() {
 
         <div className="flex flex-col items-end gap-4">
           <div className="flex gap-2 items-end">
-            <button className="p-1.5 lg:p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors">
+            <button className="p-1.5 lg:p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors cursor-pointer">
               <ChevronLeft size={20} />
             </button>
-            <button className="p-1.5 lg:p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors">
+            <button className="p-1.5 lg:p-3 border border-gray-200 rounded-[12px] hover:bg-gray-50 transition-colors cursor-pointer">
               <ChevronRight size={20} />
             </button>
           </div>

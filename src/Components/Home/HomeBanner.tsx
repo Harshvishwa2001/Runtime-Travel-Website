@@ -43,7 +43,7 @@ export default function HomeBanner() {
                                 className="flex-1 bg-transparent outline-none text-[#243665] text-sm lg:text-lg placeholder:text-[#99A1AF]"
                             />
 
-                            <button className="bg-[#26355D] hover:bg-[#1a2542] text-white px-5 lg:px-8 py-3 rounded-[14px] flex items-center gap-2 font-bold transition-all duration-300 font-arial tracking-wider text-sm">
+                            <button className="bg-[#26355D] hover:bg-[#1a2542] text-white px-5 lg:px-8 py-3 rounded-[14px] flex items-center gap-2 font-bold transition-all duration-300 font-arial tracking-wider text-sm cursor-pointer">
                                 <span className="hidden lg:inline">Search</span> <ArrowRight size={16} />
                             </button>
                         </div>
@@ -53,7 +53,7 @@ export default function HomeBanner() {
                             {tags.map((tag) => (
                                 <button
                                     key={tag}
-                                    className="px-6 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white  text-[10px] lg:text-[12px] transition-all duration-300 font-arial tracking-wider"
+                                    className="px-6 py-2 rounded-full border border-white/20 bg-black/20 backdrop-blur-md text-white  text-[10px] lg:text-[12px] transition-all duration-300 font-arial tracking-wider cursor-pointer"
                                 >
                                     {tag}
                                 </button>

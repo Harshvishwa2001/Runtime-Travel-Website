@@ -35,7 +35,7 @@ export default function OurLeagacy() {
                     <p className='text-[#6A7282] lg:w-87.25 font-secondary text-sm lg:text-[18px]'>For three decades we have bridged the gap
                         between the curious traveler and the guarded
                         secrets of the orient</p>
-                    <button className='flex gap-6 items-center'><BsArrowRight size={20} className='w-10 h-10 p-2 rounded-full border' /> Our Legacy</button>
+                    <button className='flex gap-6 items-center'><BsArrowRight size={20} className='w-10 h-10 p-2 rounded-full border cursor-pointer' /> Our Legacy</button>
                     <div className='border-l lg:mt-20 pl-6 border-black leading-10'>
                         <p className='text-[#243665] text-sm lg:text-[18px]'>Founding Ethos</p>
                         <p className='text-lg lg:text-2xl'>Preservation through exploration.</p>

@@ -66,7 +66,7 @@ export function ItineraryNav() {
                             <button
                                 key={item.id}
                                 onClick={() => setActiveTab(item.name)}
-                                className="relative bottom-0 py-6 transition-all duration-500"
+                                className="relative bottom-0 py-6 transition-all duration-500 cursor-pointer"
                             >
                                 {/* Nav Text */}
                                 <span className={`text-sm lg:text-lg font-serif tracking-wide ${isActive ? 'text-gray-900' : 'text-gray-400 hover:text-gray-600'

@@ -48,7 +48,7 @@ export default function Journey() {
                 <h2 className="text-2xl lg:text-[48px] text-[#050E1A]">Bespoke Journeys</h2>
                 <div className="flex items-end justify-between">
                     <p className="text-[12px] lg:text-[16px] font-secondary text-[#6A7282] mt-4">Curated experiences that transcend travel, offering deep immersion into local culture, history, and unparalleled luxury.</p>
-                    <button className="uppercase text-[10px] lg:text-[12px] font-bold tracking-widest">View All Journeys</button>
+                    <button className="uppercase text-[10px] lg:text-[12px] font-bold tracking-widest cursor-pointer">View All Journeys</button>
                 </div>
             </div>
 

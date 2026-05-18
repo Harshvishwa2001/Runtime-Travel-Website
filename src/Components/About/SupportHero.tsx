@@ -55,7 +55,7 @@ export default function SupportHero({ img, vid, title, subdesc, tag }: SupportHe
                 {/* Sophisticated Gold Button (matching other components) */}
                 <Link
                     href="/create-trip"
-                    className="bg-[#C8913A] text-white font-sans text-[10px] lg:text-[12px] tracking-[0.2em] uppercase py-4 lg:py-4 px-4 lg:px-12 rounded-sm transition-all duration-300 hover:bg-[#A6752D] hover:shadow-lg active:scale-95 mb-6"
+                    className="bg-[#C8913A] text-white font-sans text-[10px] lg:text-[12px] tracking-[0.2em] uppercase py-4 lg:py-4 px-4 lg:px-12 rounded-sm transition-all duration-300 hover:bg-[#A6752D] hover:shadow-lg active:scale-95 mb-6 cursor-pointer"
                 >
                     CREATE YOUR TRIP
                 </Link>

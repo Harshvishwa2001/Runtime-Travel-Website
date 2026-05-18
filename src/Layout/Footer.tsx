@@ -110,7 +110,7 @@ export default function Footer() {
                             Sustainability Coordinator: <br />
                             <a href="mailto:tours@travelest.in" className='font-bold'>tours@travelest.in</a>
                         </p>
-                        <button className='flex items-center text-[#433E3F] text-sm font-medium hover:font-bold transition-all duration-500 cursor-pointer underline font-manrope gap-2 mt-4'><ArrowRight size={16} /> Our policy</button>
+                        <button className='flex items-center text-[#433E3F] text-sm font-medium hover:font-bold transition-all duration-500 cursor-pointer underline font-manrope gap-2 mt-4 cursor-pointer'><ArrowRight size={16} /> Our policy</button>
                     </div>
                 </div>
 

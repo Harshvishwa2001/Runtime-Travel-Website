@@ -57,13 +57,13 @@ export default function Category() {
         <div className='px-4 lg:px-25'>
             <div className='flex items-center justify-between'>
                 <h2 className='text-2xl lg:text-[48px] text-[#0D0D0D]'>Explore Categories</h2>
-                <Button text='View All' className='text-[12px] font-bold uppercase border-b border-black rounded-none' />
+                <Button text='View All' className='text-[12px] font-bold uppercase border-b border-black rounded-none cursor-pointer' />
             </div>
             <div className='flex items-center justify-start gap-2 lg:gap-3.5 py-6 lg:py-12.5 overflow-hidden'>
                 {
                     Categorydata.map((item, index) => (
                         <div key={index} >
-                            <button className='text-sm lg:text-[20px] text-[#0D0D0D] border border-[#D6D6D6] font-secondary rounded-lg px-4 py-1' >{item}</button>
+                            <button className='text-sm lg:text-[20px] text-[#0D0D0D] border border-[#D6D6D6] font-secondary rounded-lg px-4 py-1 cursor-pointer' >{item}</button>
                         </div>
                     ))
                 }
