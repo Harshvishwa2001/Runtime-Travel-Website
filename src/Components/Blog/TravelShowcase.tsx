@@ -40,7 +40,7 @@ const TravelCard: React.FC<CardProps> = ({ imageSrc, authorName, unsplashLink, i
 
 export default function TravelShowcase() {
     return (
-        <section className="w-full min-h-screen bg-white px-4 lg:px-25 py-20 lg:py-30">
+        <section className="w-full min-h-screen bg-black/15 px-4 lg:px-25 py-20 lg:py-30">
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center justify-center'>
                 <div>
                     <h2 className='text-2xl lg:text-[56px] text-[#333333] leading-8 lg:leading-14 font-bold'>
