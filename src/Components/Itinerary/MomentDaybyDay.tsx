@@ -44,7 +44,7 @@ export default function MomentDaybyDay() {
                     <p className='font-secondary text-[10px] text-[#C8913A]  uppercase text-center'>The Journey</p>
                     <h2 className='text-2xl lg:text-[46.47px] text-[#1A1A1A] text-center'>Need to Know Before You Go</h2>
                 </div>
-                <div className='grid lg:grid-cols-2 lg:gap-10 py-8lg:py-17.5 justify-center'>
+                <div className='grid lg:grid-cols-2 lg:gap-10 py-8 lg:py-17.5 justify-center'>
                     <ul className="py-6">
                         {data?.items.map((item, index) => (
                             <li key={index} className="flex items-start gap-4 text-sm lg:text-[18px] text-[#555555] tracking-wider leading-7" >
